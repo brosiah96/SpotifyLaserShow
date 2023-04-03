@@ -1,0 +1,5 @@
+CLIENT_ID = 'YOUR CLIIENT ID'
+CLIENT_SECRET = 'CLIENT SECRET'
+USERNAME = 'SPOTIFY ACCOUNT USERNAME'
+REDIRECT_URI = 'REDIRECT URI'
+SCOPE = 'user-read-playback-state user-modify-playback-state'
