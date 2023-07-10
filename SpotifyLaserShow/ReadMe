@@ -1,0 +1,35 @@
+Music Visualizer
+The Music Visualizer is a Python program that synchronizes visual effects with music from Spotify. It uses Panda3D, a 3D rendering and game development library, and Spotipy, a lightweight Python library for the Spotify Web API, to create a laser show which reacts to the music's characteristics like tempo, danceability, energy, and more.
+
+Features
+Synchronizes visual effects with currently playing music on Spotify.
+Varying effects based on the track's tempo, danceability, energy, valence, loudness, and liveness.
+Utilizes a laser show as the visual representation.
+Dependencies
+Python 3.6+
+Panda3D
+Spotipy
+Numpy
+To install all the required python packages, you can use the following pip command:
+
+pip install panda3d spotipy numpy
+Usage
+To run the Music Visualizer, you need to have a Spotify account and register an app on the Spotify Developer Dashboard to get the required credentials (CLIENT_ID, CLIENT_SECRET, REDIRECT_URI).
+
+Store these credentials in a config.py file as follows:
+
+CLIENT_ID = "Your Spotify Client ID"
+CLIENT_SECRET = "Your Spotify Client Secret"
+REDIRECT_URI = "Your Redirect URI"
+SCOPE = "user-read-playback-state user-modify-playback-state"
+After setting up your credentials, you can start the visualizer with the following command:
+
+python main.py
+Classes and Methods
+AudioData: This class interfaces with the Spotify API to get the audio analysis of the currently playing track. It fetches parameters like tempo, danceability, energy, and more.
+
+Laser: This class represents a single laser in the laser show. It has attributes for position, velocity, and color.
+
+LaserShow: This class manages the laser show. It controls the number of lasers, their behavior, and how they respond to the audio data.
+
+start_visualizer(token): This function initializes an AudioData instance and a LaserShow instance, and enters the main application loop.
